@@ -1,0 +1,1211 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    height: 100vh;
+    
+}
+.gateway {
+    border:1px solid #000000;
+    border-radius:200px 200px 0px 0px;
+    width:400px;
+    height:500px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+/*Gateway 1*/
+.gate-1 {
+    display:none;
+    color:white;
+    text-align: center;
+}
+.p1-1 {
+    position: relative;
+    top: 100px;
+    transform: translateY(-50%);
+}
+.p1-2 {
+    position: relative;
+    top: 100px;
+    transform: translateX(10%);
+}
+.p1-3 {
+    position: relative;
+    top: 130px;
+    transform: translateX(-20%);
+}
+.p1-4 {
+    position: relative;
+    top: 150px;
+    transform: translateX(-30%);
+}
+.p1-5 {
+    position: relative;
+    top: 180px;
+    transform: translateX(-20%);
+}
+.p1-6 {
+    position: relative;
+    top: 300px;
+    transform: translateX(30%);
+}
+
+.moon {
+    display: none;
+    color:white;
+    font-size:50px;
+    text-align:left;
+    top:60px;
+    left:80px;
+}
+
+.firefly {
+    display:none;
+    border-radius:25px;
+    padding:1px;
+    height:3px;
+    width:3px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+/*Gateway 2*/
+.gate-2 {
+    display:none;
+    color:white;
+    text-align: center;
+}
+.p2-1 {
+    position: relative;
+    top: 80px;
+    transform: translateX(-30%);
+}
+.p2-2 {
+    position: relative;
+    top: 100px;
+    transform: translateX(-20%);
+}
+.p2-3 {
+    position: relative;
+    top: 140px;
+    transform: translateX(5%);
+}
+.p2-4 {
+    position: relative;
+    top: 150px;
+    transform: translateX(10%);
+}
+.p2-5 {
+    position: relative;
+    top: 200px;
+    transform: translateX(-10%);
+}
+.p2-6 {
+    position: relative;
+    top: 300px;
+    transform: translateX(30%);
+}
+
+.firework {
+    display:none;
+    border:2px dotted white;
+    border-radius:25px;
+    padding:1px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+/*Gateway 3*/
+.gate-3 {
+    display:none;
+    color:white;
+    text-align: center;
+}
+.p3-1 {
+    position: relative;
+    top: 60px;
+    transform: translateX(0%);
+}
+.p3-2 {
+    position: relative;
+    top: 70px;
+    transform: translateX(10%);
+}
+.p3-3 {
+    position: relative;
+    top: 90px;
+    transform: translateX(-5%);
+}
+.p3-4 {
+    position: relative;
+    top: 130px;
+    transform: translateX(-20%);
+}
+.p3-5 {
+    position: relative;
+    top: 150px;
+    transform: translateX(-5%);
+}
+.p3-6 {
+    position: relative;
+    top: 170px;
+    transform: translateX(15%);
+}
+.p3-7 {
+    position: relative;
+    top: 170px;
+    transform: translateX(20%);
+}
+.confetti {
+    display:none;
+    color:black;
+    border-radius:25px;
+    padding:1px;
+    height:3px;
+    width:3px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    font-size:40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pointing {
+    display:none;
+    color:black;
+    display: inline-block;
+    position: absolute;
+    font-size:60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Gateway 3*/
+.gate-4 {
+    display:none;
+    color:white;
+    text-align: center;
+}
+.p4-1 {
+    position: relative;
+    top: 150px;
+    transform: translateX(20%);
+}
+.p4-2 {
+    position: relative;
+    top: 150px;
+    transform: translateX(30%);
+}
+.p4-3 {
+    position: relative;
+    top: 180px;
+    transform: translateX(25%);
+}
+.p4-4 {
+    position: relative;
+    top: 180px;
+    transform: translateX(15%);
+}
+.p4-5 {
+    position: relative;
+    top: 190px;
+    transform: translateX(5%);
+}
+.p4-6 {
+    position: relative;
+    top: 200px;
+    transform: translateX(25%);
+}
+.pointers {
+    display:none;
+    color:black;
+    border-radius:25px;
+    padding:20px;
+    height:3px;
+    width:3px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:30px;
+    filter: blur(5px);
+}
+.pointers:hover {
+    filter: none;
+}
+
+/*Responsive Section!*/
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: black;
+    }
+    .gateway {
+        border:1px solid #ffffff;
+        animation: pulse 2s infinite linear;
+    }
+    .gate-1 {
+        display:block;
+    }
+    .moon {
+        display:block;
+        position:absolute;
+    }
+
+    /*Firefly 1*/
+    .f1 {
+        top:20px;
+        left:30px;
+        background-color: tomato;
+        animation-name: fireflyGlow-tomato;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f2 {
+        top:50px;
+        left:20px;
+        background-color: lightblue;
+        animation-name: fireflyGlow-lightblue;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f3 {
+        top:100px;
+        left:80px;
+        background-color: lightyellow;
+        animation-name: fireflyGlow-lightyellow;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f4 {
+        top:30px;
+        left:200px;
+        background-color: lightpink;
+        animation-name: fireflyGlow-lightpink;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f5 {
+        top:90px;
+        left:350px;
+        background-color: tomato;
+        animation-name: fireflyGlow-tomato;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f6 {
+        top:130px;
+        left:100px;
+        background-color: lightblue;
+        animation-name: fireflyGlow-lightblue;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f7 {
+        top:200px;
+        left:250px;
+        background-color: lightyellow;
+        animation-name: fireflyGlow-lightyellow;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f8 {
+        top:300px;
+        left:200px;
+        background-color: lightpink;
+        animation-name: fireflyGlow-lightpink;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f9 {
+        top:370px;
+        left:150px;
+        background-color: lightblue;
+        animation-name: fireflyGlow-lightblue;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f10 {
+        top:220px;
+        left:90px;
+        background-color: lightyellow;
+        animation-name: fireflyGlow-lightyellow;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f11 {
+        top:500px;
+        left:60px;
+        background-color: lightpink;
+        animation-name: fireflyGlow-lightpink;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f12 {
+        top:600px;
+        left:180px;
+        background-color: tomato;
+        animation-name: fireflyGlow-tomato;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f13 {
+        top:240px;
+        left:400px;
+        background-color: lightblue;
+        animation-name: fireflyGlow-lightblue;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f14 {
+        top:320px;
+        left:350px;
+        background-color: lightyellow;
+        animation-name: fireflyGlow-lightyellow;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f15 {
+        top:300px;
+        left:90px;
+        background-color:lightpink;
+        animation-name: fireflyGlow-lightpink;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f16 {
+        top:460px;
+        left:235px;
+        background-color:tomato;
+        animation-name: fireflyGlow-tomato;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f17 {
+        top:520px;
+        left:470px;
+        background-color:lightblue;
+        animation-name: fireflyGlow-lightblue;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f18 {
+        top:490px;
+        left:390px;
+        background-color:lightyellow;
+        animation-name: fireflyGlow-lightyellow;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f19 {
+        top:420px;
+        left:300px;
+        background-color:lightpink;
+        animation-name: fireflyGlow-lightpink;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f20 {
+        top:550px;
+        left:340px;
+        background-color:tomato;
+        animation-name: fireflyGlow-tomato;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes fireflyGlow-tomato {
+        0% {box-shadow: 0 0 15px 8px tomato;}
+        50% {box-shadow: 0 0 10px 10px rgba(255, 99, 71, 0.239);}
+        100% {box-shadow: 0 0 15px 8px tomato;}
+    }
+
+    /*Firefly 1*/
+    @keyframes fireflyGlow-lightblue {
+        0% {box-shadow: 0 0 20px 4px lightblue;}
+        50% {box-shadow: 0 0 10px 10px rgba(173, 216, 230, 0.721)}
+        100% {box-shadow: 0 0 20px 4px lightblue;}
+    }
+
+    @keyframes fireflyGlow-lightyellow {
+        0% {box-shadow: 0 0 25px 2px lightyellow;}
+        50% {box-shadow: 0 0 15px 10px rgba(255, 255, 224, 0.761);}
+        100% {box-shadow: 0 0 25px 2px lightyellow;}
+    }
+    @keyframes fireflyGlow-lightpink {
+        0% {box-shadow: 0 0 35px 2px lightpink;}
+        50% {box-shadow: 0 0 20px 10px lightpink;}
+        100% {box-shadow: 0 0 35px 2px lightpink;}
+    }
+}
+
+/* Gateway 2*/
+@media (min-width: 601px) and (max-width: 899px) {
+    body {
+        background: linear-gradient(-45deg, #e66465, #9198e5, #5b62a9);
+        background-size:400%;
+        background-size:400%;
+        animation: backgroundColor 20s ease infinite;
+    }
+    .gateway {
+        border:1px solid #ffffff;
+    }
+    .gate-2 {
+        display:block;
+    }
+
+    .f1 {
+        top:20px;
+        left:10%;
+        height:100px;
+        width:100px;
+        animation-name: rotate-clockwise;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f2 {
+        top:50px;
+        left:2%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f3 {
+        top:100px;
+        left:20%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-clockwise;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f4 {
+        top:30px;
+        left:40%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f5 {
+        top:90px;
+        left:80%;
+        height:110px;
+        width:110px;
+        animation-name: rotate-clockwise;
+        animation-duration: 16s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f6 {
+        top:130px;
+        left:60%;
+        height:50px;
+        width:50px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f7 {
+        top:200px;
+        left:60%;
+        height:120px;
+        width:120px;
+        animation-name: rotate-clockwise;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f8 {
+        top:300px;
+        left:80%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 14s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f9 {
+        top:370px;
+        left:10%;
+        height:110px;
+        width:110px;
+        animation-name: rotate-clockwise;
+        animation-duration: 25s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f10 {
+        top:220px;
+        left:5%;
+        height:70px;
+        width:70px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f11 {
+        top:500px;
+        left:5%;
+        height:50px;
+        width:50px;
+        animation-name: rotate-clockwise;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f12 {
+        top:580px;
+        left:8%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 19s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f13 {
+        top:240px;
+        left:80%;
+        height:100px;
+        width:100px;
+        animation-name: rotate-clockwise;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f14 {
+        top:320px;
+        left:30%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 19s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f15 {
+        top:300px;
+        left:40%;
+        height:80px;
+        width:80px;
+        animation-name: rotate-clockwise;
+        animation-duration: 23s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f16 {
+        top:460px;
+        left:44%;
+        height:70px;
+        width:70px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 31s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f17 {
+        top:520px;
+        left:77%;
+        height:60px;
+        width:60px;
+        animation-name: rotate-clockwise;
+        animation-duration: 12s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f18 {
+        top:490px;
+        left:65%;
+        height:50px;
+        width:50px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 9s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f19 {
+        top:420px;
+        left:44%;
+        height:60px;
+        width:60px;
+        animation-name: rotate-clockwise;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f20 {
+        top:550px;
+        left:88%;
+        height:70px;
+        width:70px;
+        animation-name: rotate-counterclockwise;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rotate-clockwise {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes rotate-counterclockwise {
+        0% {transform: rotate(360deg);}
+        100% {transform: rotate(0deg);}
+    }
+
+    @keyframes backgroundColor {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+}
+
+/*Gateway 3*/
+@media (min-width: 900px) and (max-width: 1199px) {
+    body {
+        background: white;
+    }
+    .gateway {
+        border:1px solid #000000;
+        animation: pulse 2s infinite linear;
+    }
+    .gate-3 {
+        display:block;
+        color:black;
+    }
+    .f1 {
+        left:10%;
+        animation-name: falling, color1;
+        animation-duration: 8s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f2 {
+        left:2%;
+        animation-name: falling, color2;
+        animation-duration: 9s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f3 {
+        left:20%;
+        animation-name: falling, color3;
+        animation-duration: 10s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f4 {
+        left:40%;
+        animation-name: falling;
+        animation-duration: 11s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f5 {
+        left:80%;
+        animation-name: falling, color1;
+        animation-duration: 10s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f6 {
+        left:60%;
+        animation-name: falling, color2;
+        animation-duration: 9s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f7 {
+        left:60%;
+        animation-name: falling, color3;
+        animation-duration: 8s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f8 {
+        left:80%;
+        animation-name: falling;
+        animation-duration: 7s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f9 {
+        left:10%;
+        animation-name: falling, color1;
+        animation-duration: 6s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f10 {
+        left:5%;
+        animation-name: falling, color2;
+        animation-duration: 7s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f11 {
+        left:5%;
+        animation-name: falling, color3;
+        animation-duration: 8s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f12 {
+        left:8%;
+        animation-name: falling;
+        animation-duration: 9s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f13 {
+        left:80%;
+        animation-name: falling, color1;
+        animation-duration: 10s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f14 {
+        left:30%;
+        animation-name: falling, color2;
+        animation-duration: 11s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f15 {
+        left:40%;
+        animation-name: falling, color3;
+        animation-duration: 10s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f16 {
+        left:44%;
+        animation-name: falling;
+        animation-duration: 9s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f17 {
+        left:77%;
+        animation-name: falling, color1;
+        animation-duration: 8s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f18 {
+        left:65%;
+        animation-name: falling, color2;
+        animation-duration: 7s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f19 {
+        left:44%;
+        animation-name: falling, color3;
+        animation-duration: 6s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f20 {
+        left:88%;
+        animation-name: falling;
+        animation-duration: 7s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f21 {
+        left:65%;
+        animation-name: falling, color1;
+        animation-duration: 8s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f22 {
+        left:7%;
+        animation-name: falling, color2;
+        animation-duration: 9s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f23 {
+        left:25%;
+        animation-name: falling, color3;
+        animation-duration: 10s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f24 {
+        left:45%;
+        animation-name: falling;
+        animation-duration: 11s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f25 {
+        left:85%;
+        animation-name: falling, color1;
+        animation-duration: 10s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f26 {
+        left:65%;
+        animation-name: falling, color2;
+        animation-duration: 9s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f27 {
+        left:78%;
+        animation-name: falling, color3;
+        animation-duration: 8s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f28 {
+        left:85%;
+        animation-name: falling;
+        animation-duration: 7s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f29 {
+        left:15%;
+        animation-name: falling, color1;
+        animation-duration: 6s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f30 {
+        left:18%;
+        animation-name: falling, color2;
+        animation-duration: 5s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f31 {
+        left:19%;
+        animation-name: falling, color3;
+        animation-duration: 4s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f32 {
+        left:22%;
+        animation-name: falling;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f33 {
+        left:88%;
+        animation-name: falling, color1;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f34 {
+        left:36%;
+        animation-name: falling, color2;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f35 {
+        left:45%;
+        animation-name: falling, color3;
+        animation-duration: 4s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .f36 {
+        left:55%;
+        animation-name: falling;
+        animation-duration: 5s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes falling {
+        0% {top:-20px;}
+        100% {top:700px;}
+    }
+    @keyframes color1 {
+        0% {color:lightblue;}
+        100% {color:lightpink;}
+    }
+    @keyframes color2 {
+        0% {color:tomato;}
+        100% {color:lightyellow;}
+    }
+    @keyframes color3 {
+        0% {color:lightsteelblue;}
+        50% {color:lightsalmon}
+        100% {color:thistle;}
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background: red;
+    }
+    .gateway {
+        border:1px solid #ffffff;
+        animation: pulse 2s infinite linear;
+    }
+    .gate-4 {
+        display:block;
+        color:black;
+    }
+    .firework {
+        border:2px solid rgba(255, 255, 255, 0);
+    }
+    .f1 {
+        top:20px;
+        left:10%;
+        height:100px;
+        width:100px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f2 {
+        top:50px;
+        left:2%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f3 {
+        top:100px;
+        left:20%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f4 {
+        top:30px;
+        left:40%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f5 {
+        top:90px;
+        left:80%;
+        height:110px;
+        width:110px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 16s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f6 {
+        top:130px;
+        left:60%;
+        height:50px;
+        width:50px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f7 {
+        top:200px;
+        left:60%;
+        height:120px;
+        width:120px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f8 {
+        top:300px;
+        left:80%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 14s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f9 {
+        top:370px;
+        left:10%;
+        height:110px;
+        width:110px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 25s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f10 {
+        top:220px;
+        left:5%;
+        height:70px;
+        width:70px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f11 {
+        top:500px;
+        left:5%;
+        height:50px;
+        width:50px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f12 {
+        top:580px;
+        left:8%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 19s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f13 {
+        top:240px;
+        left:80%;
+        height:100px;
+        width:100px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f14 {
+        top:320px;
+        left:30%;
+        height:90px;
+        width:90px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 19s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f15 {
+        top:300px;
+        left:40%;
+        height:80px;
+        width:80px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 23s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f16 {
+        top:460px;
+        left:44%;
+        height:70px;
+        width:70px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 31s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f17 {
+        top:520px;
+        left:77%;
+        height:60px;
+        width:60px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 12s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f18 {
+        top:490px;
+        left:65%;
+        height:50px;
+        width:50px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 9s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f19 {
+        top:420px;
+        left:44%;
+        height:60px;
+        width:60px;
+        animation-name: rotate-clockwise, blurry;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .f20 {
+        top:550px;
+        left:88%;
+        height:70px;
+        width:70px;
+        animation-name: rotate-counterclockwise, blurry;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rotate-clockwise {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes rotate-counterclockwise {
+        0% {transform: rotate(360deg);}
+        100% {transform: rotate(0deg);}
+    }
+    @keyframes blurry {
+        0% {filter: blur(5px);}
+        50% {filter: blur(0px);}
+        100% {filter: blur(5px);}
+    }
+}
